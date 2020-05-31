@@ -18,6 +18,7 @@
     created(){
       this.$store.dispatch("getTradeResult");
       this.$store.dispatch("initApp");
+      this.$store.dispatch("initAuth")
     }
   }
 

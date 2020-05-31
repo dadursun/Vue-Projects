@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import product from "./modules/product";
+import auth from "./modules/auth";
 import * as getters from "./getters";
 import * as mutations from "./mutations";
 import * as actions from "./actions";
@@ -17,6 +18,7 @@ export const store = new Vuex.Store({
   mutations,
   actions,
   modules : {
-    product
+    product,
+    auth
   }
 });
