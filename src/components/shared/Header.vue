@@ -17,6 +17,13 @@
         </router-link>
         <router-link
           active-class="active"
+          to="/uye-kontrol"
+          tag="li"
+          class="nav-item">
+          <a class="nav-link">Üye Kontrol</a>
+        </router-link>
+        <router-link
+          active-class="active"
           to="/urun-cikisi"
           tag="li"
           class="nav-item">

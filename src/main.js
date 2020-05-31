@@ -3,6 +3,9 @@ import App from './App.vue'
 import { router } from "./router";
 import { store } from "./store/store";
 import VueResource from "vue-resource";
+import Vuelidate from "vuelidate"
+
+Vue.use(Vuelidate)
 
 Vue.use(VueResource);
 
