@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #563F7A">
     <router-link
-      to="/"
+      to="/urun-listesi"
       tag="a"
       class="navbar-brand">
       Ürün Listesi
@@ -29,11 +29,14 @@
           class="nav-item">
           <a class="nav-link">Ürün Çıkışı</a>
         </router-link>
-        <router-link class="nav-item" tag="li" to="/">
-                    <a class="nav-link" href="#">Anasayfa</a>
+        <router-link active-class="active" class="nav-item" tag="li" to="/homepage">
+                    <a class="nav-link" >Anasayfa</a>
                 </router-link>
-                <router-link class="nav-item" tag="li" to="/about">
-                    <a class="nav-link" href="#">Hakkımda</a>
+                <router-link active-class="active" class="nav-item" tag="li" to="/about">
+                    <a class="nav-link" >Hakkımda</a>
+                </router-link>
+                <router-link active-class="active" class="nav-item" tag="li" to="/auth">
+                    <a class="nav-link" >Üye Girişi</a>
                 </router-link>
       </ul>
       <ul class="navbar-nav my-2 my-lg-0" :class="logoutClass">

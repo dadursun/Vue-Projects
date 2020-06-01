@@ -11,14 +11,15 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
-  { path : "/", component : ProductList },
-  { path : "/urun-islemleri", component : ProductPurchase },
-  { path : "/urun-cikisi", component : ProductSell },
+  { path : "/urun-listesi", component : ProductList },
+  { path : "/homepage", component : Homepage },
+  { path : "/about", component : About },
   { path : "*", redirect : "/"},
   {path : "/uye-kontrol" , component:Validations},
+  {path : "/auth", component:Auth},
   {
-    path: "/homepage",
-    component: Homepage,
+    path: "/urun-cikisi",
+    component: ProductSell,
     beforeEnter(to, from, next) {
         if (store.getters.isAuthenticated) {
             next()
@@ -28,8 +29,8 @@ const routes = [
     }
 },
 {
-    path: "/about",
-    component: About,
+    path: "/urun-islemleri",
+    component: ProductPurchase,
     beforeEnter(to, from, next) {
         if (store.getters.isAuthenticated) {
             next()
@@ -38,7 +39,7 @@ const routes = [
         }
     }
 },
-{path: "/auth", component: Auth}
+{path: "/", component: Auth}
 ];
 
 export const router = new VueRouter({
