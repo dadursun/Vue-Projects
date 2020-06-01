@@ -5,7 +5,7 @@
                  :class="{'border-primary' : isUser, 'border-success' : !isUser }">
                 <h3
                         :class="{'text-primary' : isUser, 'text-success' : !isUser }"
-                        class="text-center mb-3 mt-3">Vue.js | Auth</h3>
+                        class="text-center mb-3 mt-3">Kayıt Ol | Kullanıcı Girişi</h3>
                 <hr>
                 <form @submit.prevent="onSubmit">
                     <div class="form-group">
