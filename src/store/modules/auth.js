@@ -7,7 +7,8 @@ import {router} from "../../router";
 
 const state = {
         token : "",
-        fbAPIKey : "AIzaSyBxDmSlS5VTh1NAPykdIgzn3gwsWv7s-WQ",
+        fbAPIKey : "AIzaSyB_02Bh3OwIV1ZWittKvXEKjOVWGNVKKDk",
+        
     }
     const mutations = {
         setToken(state, token){
@@ -33,7 +34,7 @@ const state = {
                     let timerSecond = +expirationDate - time
                     console.log(timerSecond)
                     dispatch("setTimeoutTimer", timerSecond)
-                    router.push("/")
+                    router.push("/urun-islemleri")
                 }
 
             } else {
@@ -42,12 +43,12 @@ const state = {
             }
         },
         login({ commit, dispatch, state}, authData){
-            let authLink = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key="
+            let authLink = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key="
             if(authData.isUser){
-                authLink = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key="
+                authLink = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key="
             }
             return axios.post(
-                authLink + "AIzaSyBxDmSlS5VTh1NAPykdIgzn3gwsWv7s-WQ",
+                authLink + "AIzaSyB_02Bh3OwIV1ZWittKvXEKjOVWGNVKKDk",
                 { email :authData.email, password : authData.password, returnSecureToken : true}
             ).then(response => {
                 // console.log(response.data)

@@ -25,7 +25,7 @@ const mutations = {
 const actions = {
   initApp({commit}) {
     // Vue Resource İşlemleri...
-    Vue.http.get("https://urun-islemleri-prod.firebaseio.com/products.json")
+    Vue.http.get("https://vue-proje-79cec.firebaseio.com/products.json")
       .then(response => {
         let data = response.body;
         for (let key in data) {
@@ -36,7 +36,7 @@ const actions = {
   },
   saveProduct({dispatch, commit, state}, product) {
     // Vue Resource İşlemleri...
-    Vue.http.post("https://urun-islemleri-prod.firebaseio.com/products.json", product)
+    Vue.http.post("https://vue-proje-79cec.firebaseio.com/products.json", product)
       .then((response) => {
         /*********** Ürün listesinin güncellenmesi *********/
         product.key = response.body.name;
@@ -63,7 +63,7 @@ const actions = {
     if (product) {
       // Z = X - Y
       let totalCount = product[0].count - payload.count;
-      Vue.http.patch("https://urun-islemleri-prod.firebaseio.com/products/" + payload.key + ".json", { count : totalCount})
+      Vue.http.patch("https://vue-proje-79cec.firebaseio.com/products/" + payload.key + ".json", { count : totalCount})
         .then(response => {
           product[0].count = totalCount;
           let tradeResult = {

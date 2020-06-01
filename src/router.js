@@ -7,6 +7,7 @@ import Auth from "./components/auth/Auth"
 import About from "./components/auth/About"
 import Homepage from "./components/auth/Homepage"
 import VueRouter from "vue-router";
+import store from "./store/store"
 
 Vue.use(VueRouter);
 
@@ -14,7 +15,7 @@ const routes = [
   { path : "/urun-listesi", component : ProductList },
   { path : "/homepage", component : Homepage },
   { path : "/about", component : About },
-  { path : "*", redirect : "/"},
+  { path : "*", redirect : "/urun-listesi"},
   {path : "/uye-kontrol" , component:Validations},
   {path : "/auth", component:Auth},
   {
@@ -39,7 +40,7 @@ const routes = [
         }
     }
 },
-{path: "/", component: Auth}
+// {path: "/", component: Auth}
 ];
 
 export const router = new VueRouter({

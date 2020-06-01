@@ -47,7 +47,7 @@
             onSubmit() {
                 this.$store.dispatch("login", { ...this.user, isUser : this.isUser  })
                     .then(response => {
-                       this.$router.push("/")
+                       this.$router.push("/urun-islemleri")
                     })
             }
         }
