@@ -8,7 +8,7 @@ import * as actions from "./actions";
 
 Vue.use(Vuex);
 
-export const store = new Vuex.Store({
+export  const store = new Vuex.Store({
   state : {
     purchase : 0.0,
     sale : 0.0,
@@ -22,3 +22,4 @@ export const store = new Vuex.Store({
     auth
   }
 });
+export default store
